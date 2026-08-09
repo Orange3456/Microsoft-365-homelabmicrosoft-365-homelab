@@ -329,25 +329,95 @@ A comprehensive Microsoft 365 Business Premium homelab built entirely hands-on o
 
 ## Repository Structure
 
+```
 microsoft-365-homelab/
 ├── README.md
 ├── LICENSE
 ├── requirements.txt
 └── screenshots/
-├── A-Users/
-├── B-Groups/
-├── C-Licensing/
-├── D-Exchange/
-├── E-Teams/
-├── F-SharePoint-OneDrive/
-├── G-Entra-ID/
-├── H-Conditional-Access/
-├── I-SSPR/
-├── J-Defender/
-├── K-Purview/
-├── L-Intune/
-├── M-PowerShell/
-└── N-Monitoring/
+    ├── A-Users/
+    │   ├── A01-active-users-list.png
+    │   ├── A02-user-properties-alice.png
+    │   ├── A03-licenses-assigned.png
+    │   ├── A04-user-blocked.png
+    │   ├── A05-deleted-users.png
+    │   ├── A06-admin-roles.png
+    │   ├── A07-user-administrator-assignment.png
+    │   └── A08-guest-users.png
+    ├── B-Groups/
+    │   ├── B01-active-groups-list.png
+    │   ├── B02-m365-group-finance.png
+    │   ├── B03-security-group-it.png
+    │   ├── B04-distribution-list-allstaff.png
+    │   ├── B05-dynamic-group-rule.png
+    │   ├── B06-dynamic-group-members.png
+    │   └── B011-active-group-entra.png
+    ├── C-Licensing/
+    │   ├── C01-licenses-overview.png
+    │   └── C02-license-user-assigned.png
+    ├── D-Exchange/
+    │   ├── D01-exchange-admin-center.png
+    │   ├── D02-mailboxes-list.png
+    │   ├── D03-shared-mailbox-created.png
+    │   ├── D04-shared-mailbox-delegation.png
+    │   └── D05-mail-flow-rule-enabled.png
+    ├── E-Teams/
+    │   ├── E01-teams-admin-center.png
+    │   ├── E02-teams-list.png
+    │   ├── E04-meeting-policy.png
+    │   └── E06-external-access.png
+    ├── F-SharePoint-OneDrive/
+    │   ├── F01-sharepoint-admin-center.png
+    │   ├── F02-active-sites-list.png
+    │   ├── F04-site-permissions.png
+    │   └── F07-onedrive-admin-access.png
+    ├── G-Entra-ID/
+    │   ├── G01-entra-admin-center.png
+    │   ├── G03-authenticator-enabled.png
+    │   ├── G04-sms-disabled.png
+    │   └── G06-sspr-properties.png
+    ├── H-Conditional-Access/
+    │   ├── H01-emergency-admin-created.png
+    │   ├── H03-ca-policies-list.png
+    │   ├── H04-ca001-mfa-all-users.png
+    │   ├── H05-ca001-exclusions.png
+    │   ├── H06-named-location-italy.png
+    │   ├── H07-ca002-block-outside-italy.png
+    │   └── H08-ca003-mfa-admins.png
+    ├── I-SSPR/
+    │   ├── I01-sspr-enabled.png
+    │   ├── I02-sspr-registration.png
+    │   └── I03-sspr-not-registered.png
+    ├── J-Defender/
+    │   ├── J01-threat-policies.png
+    │   ├── J02-safe-attachments.png
+    │   ├── J03-safe-links.png
+    │   └── J06-device-onboarded.png
+    ├── K-Purview/
+    │   ├── K01-purview-portal.png
+    │   ├── K02-retention-policy.png
+    │   ├── K03-dlp-policy.png
+    │   └── K05-sensitivity-label.png
+    ├── L-Intune/
+    │   ├── L01-intune-dashboard.png
+    │   ├── L02-compliance-policy.png
+    │   ├── L04-configuration-profile.png
+    │   └── L05-app-protection-policy.png
+    ├── M-PowerShell/
+    │   ├── M01-connected-mggraph.png
+    │   ├── M02-get-mguser.png
+    │   ├── M07-exo-mailboxes.png
+    │   └── M09-bulk-user-creation.png
+    └── N-Monitoring/
+        ├── N1 M365 Usage reports.png
+        ├── N2 Audit search.png
+        ├── N3 signin logs entra.png
+        ├── N4 Alert policy.png
+        ├── N5 Secure score.png
+        ├── N6 Secure score recommendations.png
+        ├── N7 History secure score improvement .png
+        └── N8 Entra policy block legacy authentication.png
+```
 
 ---
 
