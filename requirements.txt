@@ -1,0 +1,33 @@
+# Microsoft 365 Business Premium Homelab - Environment Details
+
+## Tenant
+Plan: Microsoft 365 Business Premium
+Tenant: praveenlab2026.onmicrosoft.com
+Trial Duration: 30 days
+
+## Hardware
+Device: Dell Latitude
+Processor: Intel Core i5
+RAM: 16GB
+Storage: 512GB SSD
+
+## Admin Portals Used
+M365 Admin Center: admin.microsoft.com
+Microsoft Entra: entra.microsoft.com
+Exchange Online: admin.exchange.microsoft.com
+Microsoft Teams: admin.teams.microsoft.com
+SharePoint: praveenlab2026-admin.sharepoint.com
+Microsoft Intune: intune.microsoft.com
+Microsoft Defender: security.microsoft.com
+Microsoft Purview: purview.microsoft.com
+
+## PowerShell Modules
+Microsoft.Graph: 2.x
+ExchangeOnlineManagement: 3.x
+MicrosoftTeams: 6.x
+Microsoft.Online.SharePoint.PowerShell: 16.x
+
+## Certifications
+Microsoft AZ-900 - Azure Fundamentals
+Microsoft SC-900 - Security Compliance and Identity
+AWS Certified Cloud Practitioner
