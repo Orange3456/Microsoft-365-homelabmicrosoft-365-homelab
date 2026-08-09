@@ -44,7 +44,7 @@ A comprehensive Microsoft 365 Business Premium homelab built entirely hands-on o
 | Plan | Microsoft 365 Business Premium |
 | Tenant | praveenlab2026.onmicrosoft.com |
 | Users | 10+ test users across IT, Finance, HR, Sales, Marketing |
-| Admin Account | PRAVEENKUMARSAMINATHAN@praveenlab2026.onmicrosoft.com |
+| Admin Account | Praveenkumar.Saminathan@praveenlab2026.onmicrosoft.com |
 | Entra ID | P1 - included in Business Premium |
 | Intune | Included in Business Premium |
 | Defender | Defender for Business + Defender for Office 365 P1 |
