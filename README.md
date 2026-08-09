@@ -56,41 +56,40 @@ A comprehensive Microsoft 365 Business Premium homelab built entirely hands-on o
 ## What Was Built
 
 ### User and Group Management
-- Created and managed 10+ users across multiple departments
-- Full Joiner-Mover-Leaver (JML) lifecycle implemented hands-on
+- Created and managed 10+ users across multiple departments including Alice Johnson, Bob Smith, Carol White, Emma Davis and others
+- Full Joiner-Mover-Leaver (JML) lifecycle implemented hands-on - blocking sign-in, deleting and restoring users
 - Created Microsoft 365 Groups, Security Groups, Distribution Lists and Dynamic Groups
-- Dynamic Groups with auto-membership rules using Entra ID P1
-- Assigned admin roles following principle of least privilege
+- Dynamic Groups with auto-membership rules using Entra ID P1 - department equals IT
+- Assigned admin roles following principle of least privilege - User Administrator assigned to Bob Smith
 - Bulk user creation from CSV via PowerShell Microsoft Graph
 - Guest user invitation and management
 
 ### Identity and Access Management
-- Configured Multi-Factor Authentication using Microsoft Authenticator app
+- Configured Multi-Factor Authentication using Microsoft Authenticator app - SMS disabled following security best practice
 - Disabled Security Defaults and implemented Conditional Access policies
-- CA001: Require MFA for all users
+- CA001: Require MFA for all users with emergency admin exclusion
 - CA002: Block sign-ins from outside Italy with Named Locations
-- CA003: Require MFA for all admin roles
-- CA004: Block legacy authentication protocols
+- CA003: Require MFA for all admin roles (6 directory roles selected)
 - Created emergency admin account to prevent tenant lockout
 - Enabled and tested Self-Service Password Reset (SSPR)
 - Configured Temporary Access Pass for emergency MFA recovery
 
 ### Exchange Online
 - Managed user mailboxes and permissions
-- Created shared mailbox (IT Help Desk) with Full Access and Send As permissions
+- Created IT Help Desk shared mailbox with Full Access and Send As permissions
 - Configured mail flow rule appending legal disclaimer to all outbound email
-- Set up room mailbox with auto-accept booking for Milan Conference Room
+- Set up Milan Conference Room mailbox with auto-accept booking
 - Configured anti-spam, anti-malware and anti-phishing policies
 - Set email forwarding and out-of-office replies via PowerShell
 
 ### Microsoft Teams
-- Created Teams with standard and private channels
+- Created Finance Team and IT Support Team with standard and private channels
 - Configured custom meeting policy restricting cloud recording and screen sharing
 - Configured messaging policy for professional environment
 - Configured external access (federation) and guest access settings
 
 ### SharePoint Online and OneDrive
-- Created team site with custom permission levels (Owner, Member, Visitor)
+- Created IT Department Hub team site with custom permission levels
 - Created document libraries and folder structure
 - Configured external sharing settings
 - Accessed user OneDrive as admin for data governance
@@ -98,41 +97,34 @@ A comprehensive Microsoft 365 Business Premium homelab built entirely hands-on o
 ### Security - Microsoft Defender for Business
 - Configured Safe Attachments with sandbox analysis blocking zero-day malware
 - Configured Safe Links with time-of-click URL protection
-- Hardened anti-phishing with impersonation protection for admin accounts
-- Onboarded Windows device to Defender for Business via local script
-- Configured security role assignments (Security Reader, Security Administrator)
-- Configured email notifications for incidents and vulnerabilities
+- Hardened anti-phishing with impersonation protection
+- Onboarded Windows device to Defender for Business
+- Configured security role assignments and email notifications
 
 ### Compliance - Microsoft Purview
 - Created 7-year email retention policy for Exchange mailboxes
-- Created DLP policy protecting EU financial data across all M365 locations
+- Created DLP policy protecting EU financial data
 - Created and published Confidential sensitivity label with encryption
 - Investigated audit logs and sign-in logs for security scenarios
-- Configured compliance alert policies
 
-### Microsoft Intune - Device Management
+### Microsoft Intune
 - Created Windows compliance policy requiring BitLocker, PIN, antivirus and firewall
 - Created Windows configuration profile for Defender and update settings
 - Created iOS app protection policy for Outlook (MAM)
-- Assigned compliance policies to security groups
-- Configured Defender for Business onboarding
+- Assigned policies to security groups
 
 ### PowerShell Automation
-- Connected to Microsoft Graph, Exchange Online, Teams and SharePoint via PowerShell
-- Listed and managed users, groups and licenses via Microsoft Graph
-- Created, updated, disabled and deleted users via PowerShell
+- Connected to Microsoft Graph, Exchange Online, Teams and SharePoint
+- Created, updated, disabled and deleted users via Microsoft Graph
 - Assigned and removed Business Premium licenses programmatically
-- Listed and managed Exchange Online mailboxes and permissions
 - Bulk created 3 users from CSV with automatic license assignment
-- Exported results to CSV for verification
+- Listed and managed Exchange Online mailboxes and permissions
 
 ### Monitoring and Reporting
-- Reviewed M365 usage reports across Exchange, Teams, SharePoint and OneDrive
-- Investigated audit logs for security scenarios in Microsoft Purview
-- Reviewed sign-in logs in Entra ID for suspicious activity detection
-- Configured security alert policies in compliance portal
-- Reviewed and acted on Microsoft Secure Score recommendations
-- Blocked legacy authentication via Conditional Access to improve Secure Score
+- Reviewed M365 usage reports across all services
+- Investigated audit logs and sign-in logs
+- Configured security alert policies
+- Reviewed and improved Microsoft Secure Score
 
 ---
 
@@ -142,10 +134,14 @@ A comprehensive Microsoft 365 Business Premium homelab built entirely hands-on o
 
 | | |
 |---|---|
-| ![A1](screenshots/A-Users/A01-active-users-list.png) | ![A2](screenshots/A-Users/A02-user-properties.png) |
-| A1 - Active users list showing all test users across departments | A2 - User properties showing job title, department and manager |
+| ![A1](screenshots/A-Users/A01-active-users-list.png) | ![A2](screenshots/A-Users/A02-user-properties-alice.png) |
+| A1 - Active users list showing 10+ users with Business Premium licenses | A2 - Alice Johnson properties showing username and account details |
 | ![A3](screenshots/A-Users/A03-licenses-assigned.png) | ![A4](screenshots/A-Users/A04-user-blocked.png) |
-| A3 - Licenses and apps tab showing Business Premium assigned | A4 - Blocked user with red icon demonstrating JML leaver process |
+| A3 - Licenses and apps tab showing Business Premium assigned with 13 of 25 available | A4 - Bob Smith with sign-in blocked demonstrating JML leaver process |
+| ![A5](screenshots/A-Users/A05-deleted-users.png) | ![A6](screenshots/A-Users/A06-admin-roles.png) |
+| A5 - Deleted users page showing David Brown pending restoration | A6 - Admin roles list showing all available M365 admin roles |
+| ![A7](screenshots/A-Users/A07-user-administrator-assignment.png) | ![A8](screenshots/A-Users/A08-guest-users.png) |
+| A7 - User Administrator role assigned to Bob Smith | A8 - Guest users page showing Test Guest external user |
 
 ---
 
@@ -153,10 +149,14 @@ A comprehensive Microsoft 365 Business Premium homelab built entirely hands-on o
 
 | | |
 |---|---|
-| ![B1](screenshots/B-Groups/B01-active-groups-list.png) | ![B2](screenshots/B-Groups/B02-m365-group-finance-team.png) |
-| B1 - Active groups showing M365 Groups, Security Groups and Distribution Lists | B2 - Finance Team M365 Group with members and owners |
-| ![B3](screenshots/B-Groups/B05-dynamic-group-rule.png) | ![B4](screenshots/B-Groups/B06-dynamic-group-members.png) |
-| B3 - Dynamic Group membership rule: department equals IT | B4 - Dynamic Group members auto-populated from IT department |
+| ![B1](screenshots/B-Groups/B01-active-groups-list.png) | ![B2](screenshots/B-Groups/B02-m365-group-finance.png) |
+| B1 - Active groups showing Finance Team, All Company and PraveenLab M365 Groups | B2 - Finance Team M365 Group with Alice Johnson and admin as members |
+| ![B3](screenshots/B-Groups/B03-security-group-it.png) | ![B4](screenshots/B-Groups/B04-distribution-list-allstaff.png) |
+| B3 - IT-Staff-Security group with 5 members including Bob Smith and Emma Davis | B4 - All Staff distribution list with email address allstaff@praveenlab2026.onmicrosoft.com |
+| ![B5](screenshots/B-Groups/B05-dynamic-group-rule.png) | ![B6](screenshots/B-Groups/B06-dynamic-group-members.png) |
+| B5 - Dynamic-IT-Department group with Dynamic membership type | B6 - Dynamic group showing 5 auto-populated IT department members |
+| ![B7](screenshots/B-Groups/B011-active-group-entra.png) | |
+| B7 - Entra ID Groups overview showing 6 total groups including 3 M365 and 2 security groups | |
 
 ---
 
@@ -165,7 +165,7 @@ A comprehensive Microsoft 365 Business Premium homelab built entirely hands-on o
 | | |
 |---|---|
 | ![C1](screenshots/C-Licensing/C01-licenses-overview.png) | ![C2](screenshots/C-Licensing/C02-license-user-assigned.png) |
-| C1 - Billing licenses page showing Business Premium assigned vs available | C2 - User Licenses and apps tab showing Business Premium |
+| C1 - Billing licenses page showing Business Premium assigned vs available | C2 - User licenses tab showing Business Premium assigned |
 
 ---
 
@@ -219,10 +219,14 @@ A comprehensive Microsoft 365 Business Premium homelab built entirely hands-on o
 
 | | |
 |---|---|
-| ![H1](screenshots/H-Conditional-Access/H01-security-defaults-off.png) | ![H2](screenshots/H-Conditional-Access/H02-ca-policies-list.png) |
-| H1 - Security Defaults disabled - switching to Conditional Access | H2 - All four CA policies listed with status On |
-| ![H3](screenshots/H-Conditional-Access/H03-ca001-settings.png) | ![H4](screenshots/H-Conditional-Access/H04-named-location-italy.png) |
-| H3 - CA001 Require MFA for all users with exclusions configured | H4 - Italy Named Location for geo-based access control |
+| ![H1](screenshots/H-Conditional-Access/H01-emergency-admin-created.png) | ![H2](screenshots/H-Conditional-Access/H03-ca-policies-list.png) |
+| H1 - Emergency Admin account created to prevent tenant lockout | H2 - All CA policies listed showing CA001, CA002, CA003 all On |
+| ![H3](screenshots/H-Conditional-Access/H04-ca001-mfa-all-users.png) | ![H4](screenshots/H-Conditional-Access/H05-ca001-exclusions.png) |
+| H3 - CA001 Require MFA for all users - state On | H4 - CA001 exclusions showing 2 users excluded (emergency admin) |
+| ![H5](screenshots/H-Conditional-Access/H06-named-location-italy.png) | ![H6](screenshots/H-Conditional-Access/H07-ca002-block-outside-italy.png) |
+| H5 - Italy Named Location configured for geo-based access control | H6 - CA002 Block Access Outside Italy with Italy excluded |
+| ![H7](screenshots/H-Conditional-Access/H08-ca003-mfa-admins.png) | |
+| H7 - CA003 Require MFA for All Admins with 6 directory roles selected | |
 
 ---
 
@@ -233,7 +237,7 @@ A comprehensive Microsoft 365 Business Premium homelab built entirely hands-on o
 | ![I1](screenshots/I-SSPR/I01-sspr-enabled.png) | ![I2](screenshots/I-SSPR/I02-sspr-registration.png) |
 | I1 - SSPR enabled for all users | I2 - Registration required on next sign-in |
 | ![I3](screenshots/I-SSPR/I03-sspr-not-registered.png) | |
-| I3 - SSPR error when user has not registered - demonstrates full flow | |
+| I3 - SSPR error when user not registered - demonstrates full flow | |
 
 ---
 
@@ -242,9 +246,9 @@ A comprehensive Microsoft 365 Business Premium homelab built entirely hands-on o
 | | |
 |---|---|
 | ![J1](screenshots/J-Defender/J01-threat-policies.png) | ![J2](screenshots/J-Defender/J02-safe-attachments.png) |
-| J1 - Threat policies page showing all security policies | J2 - Safe Attachments policy set to Block with sandbox analysis |
+| J1 - Threat policies page showing all security policies | J2 - Safe Attachments policy set to Block |
 | ![J3](screenshots/J-Defender/J03-safe-links.png) | ![J4](screenshots/J-Defender/J06-device-onboarded.png) |
-| J3 - Safe Links policy with time-of-click protection enabled | J4 - Windows device onboarded to Defender for Business |
+| J3 - Safe Links policy with time-of-click protection | J4 - Windows device onboarded to Defender for Business |
 
 ---
 
@@ -277,7 +281,7 @@ A comprehensive Microsoft 365 Business Premium homelab built entirely hands-on o
 | ![M1](screenshots/M-PowerShell/M01-connected-mggraph.png) | ![M2](screenshots/M-PowerShell/M02-get-mguser.png) |
 | M1 - Connected to Microsoft Graph via PowerShell | M2 - Get-MgUser listing all tenant users |
 | ![M3](screenshots/M-PowerShell/M07-exo-mailboxes.png) | ![M4](screenshots/M-PowerShell/M09-bulk-user-creation.png) |
-| M3 - Exchange Online mailboxes listed via Get-EXOMailbox | M4 - Bulk user creation script - 3 users created and licensed from CSV |
+| M3 - Exchange Online mailboxes listed via Get-EXOMailbox | M4 - Bulk user creation - Sarah Green, Tom Black, Lisa Brown created from CSV |
 
 ---
 
@@ -288,7 +292,9 @@ A comprehensive Microsoft 365 Business Premium homelab built entirely hands-on o
 | ![N1](screenshots/N-Monitoring/N01-usage-reports.png) | ![N2](screenshots/N-Monitoring/N03-signin-logs.png) |
 | N1 - M365 usage reports dashboard | N2 - Entra ID sign-in logs for security monitoring |
 | ![N3](screenshots/N-Monitoring/N05-secure-score.png) | ![N4](screenshots/N-Monitoring/N06-secure-score-recommendations.png) |
-| N3 - Microsoft Secure Score dashboard | N4 - Secure Score recommended actions list |
+| N3 - Microsoft Secure Score dashboard | N4 - Secure Score recommended actions |
+| ![N5](screenshots/N-Monitoring/N07-secure-score-history.png) | ![N6](screenshots/N-Monitoring/N08-block-legacy-auth-policy.png) |
+| N5 - Secure Score history showing improvement over time | N6 - CA004 Block Legacy Authentication policy |
 
 ---
 
@@ -300,7 +306,7 @@ A comprehensive Microsoft 365 Business Premium homelab built entirely hands-on o
 | M365 Administrator | Exchange Online, Teams, SharePoint, OneDrive, Licensing, User Lifecycle |
 | IT Support Engineer | Help Desk workflows, JML process, shared mailboxes, device support |
 | Security Engineer | Safe Attachments, Safe Links, Anti-phishing, Defender for Business, DLP |
-| Endpoint Administrator | Intune compliance policies, configuration profiles, iOS MAM, Autopilot basics |
+| Endpoint Administrator | Intune compliance policies, configuration profiles, iOS MAM |
 | Compliance Administrator | Retention policies, DLP, Sensitivity Labels, Audit Logs, Purview |
 | PowerShell Engineer | Microsoft Graph API, Exchange Online, bulk operations, CSV automation |
 
@@ -317,6 +323,30 @@ A comprehensive Microsoft 365 Business Premium homelab built entirely hands-on o
 | Compliance | Microsoft Purview, DLP, Retention Policies, Sensitivity Labels, Audit Logs |
 | Automation | PowerShell, Microsoft Graph SDK, ExchangeOnlineManagement module |
 | Admin Portals | admin.microsoft.com, entra.microsoft.com, security.microsoft.com, intune.microsoft.com, purview.microsoft.com |
+
+---
+
+## Repository Structure
+
+microsoft-365-homelab/
+├── README.md
+├── LICENSE
+├── requirements.txt
+└── screenshots/
+├── A-Users/
+├── B-Groups/
+├── C-Licensing/
+├── D-Exchange/
+├── E-Teams/
+├── F-SharePoint-OneDrive/
+├── G-Entra-ID/
+├── H-Conditional-Access/
+├── I-SSPR/
+├── J-Defender/
+├── K-Purview/
+├── L-Intune/
+├── M-PowerShell/
+└── N-Monitoring/
 
 ---
 
