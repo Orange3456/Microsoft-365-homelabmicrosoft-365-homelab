@@ -289,13 +289,14 @@ A comprehensive Microsoft 365 Business Premium homelab built entirely hands-on o
 
 | | |
 |---|---|
-| ![N1](screenshots/N-Monitoring/N01-usage-reports.png) | ![N2](screenshots/N-Monitoring/N03-signin-logs.png) |
-| N1 - M365 usage reports dashboard | N2 - Entra ID sign-in logs for security monitoring |
-| ![N3](screenshots/N-Monitoring/N05-secure-score.png) | ![N4](screenshots/N-Monitoring/N06-secure-score-recommendations.png) |
-| N3 - Microsoft Secure Score dashboard | N4 - Secure Score recommended actions |
-| ![N5](screenshots/N-Monitoring/N07-secure-score-history.png) | ![N6](screenshots/N-Monitoring/N08-block-legacy-auth-policy.png) |
-| N5 - Secure Score history showing improvement over time | N6 - CA004 Block Legacy Authentication policy |
-
+| ![N1](screenshots/N-Monitoring/N1%20M365%20Usage%20reports.png) | ![N2](screenshots/N-Monitoring/N2%20Audit%20search.png) |
+| N1 - M365 usage reports showing daily active users across services | N2 - Purview audit search showing 14 activity results |
+| ![N3](screenshots/N-Monitoring/N3%20signin%20logs%20entra.png) | ![N4](screenshots/N-Monitoring/N4%20Alert%20policy.png) |
+| N3 - Entra ID sign-in logs showing successful authentications from Milan IP | N4 - Alert policy creation in Microsoft Defender |
+| ![N5](screenshots/N-Monitoring/N5%20Secure%20score.png) | ![N6](screenshots/N-Monitoring/N6%20Secure%20score%20recommendations.png) |
+| N5 - Microsoft Secure Score at 48.32% with breakdown by workload | N6 - Secure Score 69 recommended actions list |
+| ![N7](screenshots/N-Monitoring/N7%20History%20secure%20score%20improvement%20.png) | ![N8](screenshots/N-Monitoring/N8%20Entra%20policy%20block%20legacy%20authentication.png) |
+| N7 - Secure Score history showing improvement to 55.87% | N8 - CA004 Block Legacy Authentication policy enabled |
 ---
 
 ## Skills Demonstrated
